@@ -315,7 +315,7 @@ header {
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     margin-top: 1rem;
 }
 
@@ -560,19 +560,8 @@ header {
 
 }
 
-@media screen and (max-width: 1024px) {
-    .popular-hostels {
-        width: 100%;
-    }
-    .marseille-hostels {
-        width: 100%;
-    }
-}
-
-
 @media screen and (max-width: 992px) {
     .marseille-hostels {
-        width: 100%;
         height: 625px;
     }
     
@@ -589,7 +578,6 @@ header {
     .card-marseille {
         max-width: 28%;
         height: auto;
-        background-color: white;
         margin: 12px auto;
     }
     
@@ -603,14 +591,88 @@ header {
     .container-popular-infos p {
         margin-bottom: 45px;
     }
-
-};
-
-@media screen and (min-width: 768px) {
-    .marseille-hostels {
-       background-color: transparent;
-    }
 }
+
+@media screen and (max-width: 768px) {
+    .hostels {
+        flex-direction: column-reverse;
+    }
+
+    .marseille-hostels {
+        margin-top: 20px;
+        height: auto;
+        background-color: transparent;
+    }
+    
+    .marseille-hostels h2 {
+        margin: 10px 0 ;
+    }
+    
+    .container-cards-marseille {
+       flex-direction: column;
+    }
+    
+    .card-marseille {
+        max-width: 100%;
+        width: 100%;
+        height: auto;
+        margin: 12px auto 0;
+    }
+    
+    .show-more {
+       display: none;
+    }
+
+
+    .popular-hostels {
+        width: 100vw;
+        min-height: 580px;
+        margin-left: calc(50% - 50vw);
+        margin-top: 0;
+        border-radius: 0px;
+        height: auto;
+        
+    }
+    .container-title-popular {
+        margin: 20px 0 10px;
+        width: 95%;
+        justify-content: space-between ;
+    }
+    .container-title-popular i {
+        margin-right: 0;
+    }
+    .container-cards-popular {
+        margin:0;
+        flex-direction: column;
+        align-items: center;
+    }
+    .card-popular {
+        width: 90%;
+        height: 144px;
+        margin: 12px 0 0;
+    }
+    .card-popular-img {
+        width: 40%;
+        height: 100%;
+    }
+    .container-popular-infos {
+        width: 60%;
+        margin-left: 10px;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .container-popular-infos h4 {
+        font-size: 16px;
+    }
+    .container-popular-infos p {
+        font-size: 14px;
+        margin-bottom: 60px;
+    }
+
+}
+
 /* --------------------------- */
 /* --------------------------- */
 /* --------------------------- */
