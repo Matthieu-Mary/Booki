@@ -1,0 +1,837 @@
+/* ----- RESET CSS ----- */
+* ::before ::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ----- GENERAL CSS ----------------------------------------------------------------------------------- */
+:root {
+    --black-1: #000000;
+    --primary-1 : #0065FC;
+    --primary-2: #DEEBFF;
+    --grey-1: #f2f2f2;
+    --grey-2: #d9d9d9;
+
+    --border-radius: 20px;
+
+    --box-shadow:  1.5px 1.5px 5px 2px rgba(140, 140, 140, 0.3);
+}
+
+html, body {
+    font-family: 'Raleway', sans-serif;
+    max-width: 1400px;
+    height: 100vh;
+    margin: 0 auto;
+}
+
+/* ----- HEADER ---------------------------------------------------------------------------------------- */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo-reservia {
+    width: 62px;
+    height: 20px;
+    padding: 2rem;
+}
+
+.navbar-header {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.nav-link {
+    padding: 2rem;
+    transition: border-top 0.15s ease;
+    text-decoration: none;
+}
+
+.nav-link:hover {
+    color: var(--primary-1);
+    border-top: 3px solid var(--primary-1);
+    font-weight: 500;
+}
+
+.nav-link[data-active=true] {
+    color: var(--primary-1);
+    border-top: 3px solid var(--primary-1);
+    font-weight: 500;
+}
+
+@media screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+    }
+
+    .navbar-header {
+        width: 100%;
+        justify-content: space-around;
+        text-align: center ;
+    }
+
+    .nav-link {
+        width: 100%;
+        padding: 1.5rem;
+    }
+
+    .nav-link:hover {
+        border-top: none;
+        border-bottom: 3px solid var(--primary-1);
+    }
+
+    .nav-link[data-active=true] {
+        border-top: none;
+        border-bottom: 3px solid var(--primary-1);
+    }
+}
+
+        
+/* ----- SEARCH SECTION AND FILTER------------------------------------------------------------------- */
+
+.container-title {
+    padding: 2rem 2rem 1.5rem 2rem;
+}
+
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0 auto 8px;
+}
+
+.title-infos {
+    margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .container-title {
+        padding: 1.5rem;
+    }   
+}
+
+/* -------------------------------- */ 
+
+.search-form {
+    width: 100%;
+    display: inline-flex;
+    padding: 0 2rem;
+}
+
+.search-icon {
+    padding: 1rem 1.25rem;
+    border-radius: 1rem 0 0 1rem;
+    background-color: var(--grey-1);
+}
+
+.search-input {
+    padding: 0 1.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: var(--black-1);
+    border-right: none;
+    border-left: none;
+    border-top: 1px solid var(--grey-1);
+    border-bottom: 1px solid var(--grey-1);
+}
+
+.search-btn {
+    cursor: pointer;
+    color: white;
+    background-color: var(--primary-1);
+    border: none;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0 1.5rem;
+    border-radius: 0 1rem 1rem 0;
+}
+
+.search-btn-span {
+    font-size: 18px;
+}
+
+.search-btn-icon {
+    display: none !important;
+}
+
+
+@media screen and (max-width: 768px) {
+    .search-form {
+        width: 332px;
+        padding: 0 1.5rem;
+    } 
+    .search-input {
+        width: 80%;
+    }
+    
+    .search-btn span {
+        display: none !important;
+    }
+    
+    .search-btn-icon {
+        display: block !important;
+    }
+}
+
+/* -------------------------------- */
+
+.container-filters-title {
+    padding: 1.3rem 2rem 1rem 2rem;
+    display: flex;
+}
+
+.container-filters {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.filters-title {
+    font-weight: bold;
+    margin-right: 1.7rem;
+}
+
+.filter {
+    display: inline-flex;
+    margin: 0.5rem 1.7rem 0.5rem 0;
+}
+
+.filter:hover {
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+    transform: scale(1.05);
+}
+
+.filter-content {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.filter-icon {
+    position: absolute;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--primary-2);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+}
+
+.filter-icon-i {
+    color: var(--primary-1);
+}
+
+.filter-text {
+    font-weight: bold;
+    margin-left: 2rem;
+    padding: 1rem 2rem;  
+    border: 2px solid var(--grey-2);
+    border-radius: 0 20px 20px 0;
+    border-left: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container-filters-title {
+        flex-direction: column;
+        justify-content: flex-start;
+        padding: 1.3rem 1rem 1rem 1.5rem;
+    }  
+    
+    .filter {
+        width: 160px;
+    }
+
+    .filter-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        border: 2px solid var(--grey-2);
+        border-radius: var(--border-radius);
+    }
+
+    .filter-icon {
+    margin-left: 20px;
+    position: relative;
+    background-color: none;
+    width: 0;
+    height: 0;
+    border-radius: 0;
+    }
+    
+    .filters-title {
+        padding: 0;
+        margin-bottom: 0.5rem;
+    }
+
+    .filter-text {
+        font-size: 11px;
+        padding: 1rem;
+        margin-left: 0;
+        border: none;
+        width: 100%;
+    }
+}
+
+/* ----------------------------------- */
+
+.container-infos {
+    margin: 0;
+    display: flex;
+    align-items: center;
+    padding: 0 2rem;
+}
+
+.infos-wrapper-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 24px;
+    min-height: 24px;
+    margin-right: 10px;
+    border: 1px solid var(--grey-2);
+    border-radius: 50%;
+}
+
+.infos-icon {
+    color: var(--primary-1);
+}
+
+.infos-text {
+    font-weight: 400;
+}
+
+
+@media screen and (max-width: 768px) {
+    .container-infos {
+        padding: 0 1.5rem;
+    }
+}
+
+/* ------- HOSTELS SECTION -------- */
+
+.hostels {
+    width: 100%;
+    padding: 0 2rem;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 1rem;
+}
+
+/* -------------MARSEILLE HOSTELS-------------- */
+
+.marseille-hostels {
+    position: relative;
+    width: 880px;
+    height: 625px;
+    padding: 2rem;
+    background-color: var(--grey-1);
+    border-radius: var(--border-radius);
+}
+
+.marseille-hostels h2 {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 0;
+    padding: 0 2rem;
+}
+
+.container-cards-marseille {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-marseille {
+    width: 245px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--border-radius)
+}
+    
+    /* --------------------------- */
+
+.marseille-hostels {
+    position: relative;
+    width: 880px;
+    height: 625px;
+    padding: 2rem;
+    background-color: var(--grey-1);
+    border-radius: var(--border-radius);
+}
+
+.marseille-hostels h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0 0 1rem 0;
+}
+
+.container-cards-marseille {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card-marseille {
+    width: 245px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: var(--border-radius);
+    padding: 0.3rem;
+    background-color: white;
+    margin: 1.2rem auto;
+    box-shadow: var(--box-shadow); 
+    cursor: pointer;
+}
+
+.card-marseille:hover {
+    transition: transform 0.15s linear;
+    transform: scale(1.05);
+}
+
+.container-card-marseille-img {
+    width: 100%;
+    height: 58%;
+}
+
+.container-card-marseille-img img {
+    object-fit: cover;
+    border-radius: 2rem 2rem 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-marseille-infos {
+    width: 100%;
+    height: 42%;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-marseille-infos h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.container-marseille-infos p {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.show-more {
+    font-weight: bold;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 3rem;
+    bottom: 2.5rem;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+    .hostels {
+        width: 90%;
+        padding-left: 2rem;
+        flex-direction: column;
+    }
+    .popular-hostels {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .container-cards-popular {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .card-popular {
+        margin: 1rem;
+        height: 11rem;
+    }
+
+
+    .marseille-hostels {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .show-more {
+        left: 4rem;
+        bottom: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container-popular-infos h4 {
+        font-size: 1rem;
+    }
+    .container-popular-infos p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .hostels {
+        width: 86%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .hostels {
+        width: 90%;
+    }
+    .popular-hostels {
+        width: 100%;
+        margin: 0 auto 1rem;
+        padding: 1rem;
+    }
+    .container-cards-popular {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-popular {
+        width: 90%;
+        height: 9rem;
+        margin: 0.75rem auto;
+    }
+
+    .marseille-hostels {
+        padding: 1rem 1rem 2.5rem 1rem;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    main{
+        max-width: 90%;
+        margin:0 auto;
+        justify-content: flex-start;
+        overflow: visible;
+    }
+    .hostels {
+        width: 100%;
+        padding: 0;
+    }
+    .popular-hostels{
+        padding: 1rem 0;
+    }
+    .container-title-popular {
+        padding: 0 0 0 1rem;
+    }
+    .container-title-popular i {
+        margin-right: 2.5rem;
+    }
+
+    .marseille-hostels {
+        position: relative;
+        height: auto;
+        padding: 0rem;
+        margin: 2rem auto;
+        background-color: white;
+    }
+    .marseille-hostels h2 {
+        margin-bottom: 1rem;
+
+        padding: 0 1rem;
+    }
+    .container-cards-marseille{
+        width: 100%;
+        flex-direction: column;
+    }
+    .card-marseille {
+        width: 100%;
+        height: 14rem;
+        padding: 0;
+        background-color: white;
+        margin: 1.2rem 0;
+        box-shadow: var(--box-shadow); 
+        cursor: pointer;
+    }
+    .show-more {
+        position: initial;
+    }
+};
+    /* padding: 0.3rem;
+    background-color: white;
+    margin: 1.2rem auto;
+    box-shadow: var(--box-shadow); 
+    cursor: pointer;
+} */
+
+.card-marseille:hover {
+    transition: transform 0.15s linear;
+    transform: scale(1.05);
+}
+
+.container-card-marseille-img {
+    width: 100%;
+    height: 124px;
+}
+
+.container-card-marseille-img img {
+    object-fit: cover;
+    border-radius: 2rem 2rem 0 0;
+    width: 100%;
+    height: 100%;
+}
+
+.container-marseille-infos {
+    width: 100%;
+    height: 75px;
+    margin-left: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-marseille-infos h4 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.container-marseille-infos p {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+}
+
+.show-more {
+    font-weight: bold;
+    font-size: 18px;
+    margin:auto;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 1400px) {
+    .hostels {
+        width: 90%;
+        padding-left: 2rem;
+        flex-direction: column;
+    }
+    .popular-hostels {
+        width: 100%;
+        margin-bottom: 2rem;
+    }
+    .container-cards-popular {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .card-popular {
+        margin: 1rem;
+        height: 11rem;
+    }
+
+
+    .marseille-hostels {
+        width: 100%;
+        margin: 0 auto;
+    }
+    .show-more {
+        left: 4rem;
+        bottom: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 1200px) {
+    .container-popular-infos h4 {
+        font-size: 1rem;
+    }
+    .container-popular-infos p {
+        font-size: 1rem;
+    }
+}
+
+@media screen and (max-width: 1100px) {
+    .hostels {
+        width: 86%;
+    }
+}
+
+@media screen and (max-width: 950px) {
+    .hostels {
+        width: 90%;
+    }
+    .popular-hostels {
+        width: 100%;
+        margin: 0 auto 1rem;
+        padding: 1rem;
+    }
+    .container-cards-popular {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-popular {
+        width: 90%;
+        height: 9rem;
+        margin: 0.75rem auto;
+    }
+
+    .marseille-hostels {
+        padding: 1rem 1rem 2.5rem 1rem;
+    }
+}
+
+
+@media screen and (max-width: 750px) {
+    main{
+        max-width: 90%;
+        margin:0 auto;
+        justify-content: flex-start;
+        overflow: visible;
+    }
+    .hostels {
+        width: 100%;
+        padding: 0;
+    }
+    .popular-hostels{
+        padding: 1rem 0;
+    }
+    .container-title-popular {
+        padding: 0 0 0 1rem;
+    }
+    .container-title-popular i {
+        margin-right: 2.5rem;
+    }
+
+    .marseille-hostels {
+        position: relative;
+        height: auto;
+        padding: 0rem;
+        margin: 2rem auto;
+        background-color: white;
+    }
+    .marseille-hostels h2 {
+        margin-bottom: 1rem;
+
+        padding: 0 1rem;
+    }
+    .container-cards-marseille{
+        width: 100%;
+        flex-direction: column;
+    }
+    .card-marseille {
+        width: 100%;
+        height: 14rem;
+        padding: 0;
+        background-color: white;
+        margin: 1.2rem 0;
+        box-shadow: var(--box-shadow); 
+        cursor: pointer;
+    }
+    .show-more {
+        position: initial;
+    }
+}
+
+/* ----------POPULAR HOSTELS------------ */
+
+.popular-hostels {
+    width: 420px;
+    height: 625px;
+    background-color: var(--grey-1);
+    padding: 2.5rem;
+    border-radius: var(--border-radius);
+}
+
+.container-title-popular {
+    width: 100%;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;   
+    margin-bottom: 1rem;
+}
+
+.container-title-popular h2 {
+    font-size: 1.3rem;
+    font-weight: 800;
+    margin: 0;
+}
+
+.container-title-popular i {
+    font-size: 1.5rem;
+}
+
+.container-cards-popular {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height:auto;
+}
+
+.card-popular {
+    width: 343px;
+    height: 9rem;
+    display: flex;
+    border-radius: var(--border-radius);
+    padding: 0.3rem;
+    background-color: white;
+    margin: 1rem 0;
+    box-shadow: var(--box-shadow); 
+    cursor: pointer; 
+}
+
+.card-popular:hover {
+    transition: transform 0.15s linear;
+    transform: scale(1.05);
+}
+
+.container-card-popular-img {
+    width: 40%;
+    height: 100%;
+}
+
+.container-card-popular-img img {
+    object-fit: cover;
+    border-radius: 2rem 0 0 2rem;
+    width: 100%;
+    height: 100%;
+}
+
+.container-popular-infos {
+    width: 60%;
+    margin-left: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.container-popular-infos h4 {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 0;
+    padding: 0;
+}
+
+.container-popular-infos p {
+    margin:0.5rem 0 2.5rem 0;
+    font-size: 1.2rem;
+}
+
+.container-stars i {
+    color: var(--grey-2);
+}
+
+.container-stars i[data-active=true] {
+    color: var(--primary-1);
+}
+
+/* --------------------------- */
+/* --------------------------- */
+/* --------------------------- */
