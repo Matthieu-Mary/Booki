@@ -262,7 +262,7 @@ header {
     .filter-icon {
     margin-left: 20px;
     position: relative;
-    background-color: none;
+    background-color: white;
     width: 0;
     height: 0;
     border-radius: 0;
