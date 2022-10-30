@@ -92,7 +92,7 @@ header {
 }
 
         
-/* ----- SEARCH SECTION AND FILTER------------------------------------------------------------------- */
+/* ----- SEARCH SECTION AND FILTERS------------------------------------------------------------------- */
 
 .container-title {
     padding: 1.75rem 0;
@@ -212,19 +212,14 @@ header {
 .filter-content {
     display: flex;
     align-items: center;
-    position: relative;
+    justify-content: space-between;
+    padding: 1rem;  
+    border: 2px solid var(--grey-2);
+    border-radius: 50px;
 }
 
-.filter-icon {
-    position: absolute;
-    left: 0;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.filter-content:hover {
     background-color: var(--primary-2);
-    width: 3.5rem;
-    height: 3.5rem;
-    border-radius: 50%;
 }
 
 .filter-icon-i {
@@ -232,12 +227,9 @@ header {
 }
 
 .filter-text {
-    font-weight: bold;
-    margin-left: 2rem;
-    padding: 1rem 2rem;  
-    border: 2px solid var(--grey-2);
-    border-radius: 0 25px 25px 0;
-    border-left: none;
+    font-size: 17px;
+    font-weight: 700; 
+    margin-left: 10px;
 }
 
 
@@ -245,29 +237,22 @@ header {
     .container-filters-title {
         flex-direction: column;
     }  
+
+    .container-filters {
+        justify-content: center;
+        align-items: center;
+    }
     
     .filter {
         width: 160px;
+        margin: 0.5rem auto;
     }
 
     .filter-content {
-        display: flex;
-        justify-content: center;
-        align-items: center;
         width: 100%;
-        border: 2px solid var(--grey-2);
-        border-radius: 25px;
     }
 
-    .filter-icon {
-    margin-left: 20px;
-    position: relative;
-    background-color: white;
-    width: 0;
-    height: 0;
-    border-radius: 0;
-    }
-    
+
     .filters-title {
         padding: 0;
         margin-bottom: 0.5rem;
@@ -275,8 +260,7 @@ header {
 
     .filter-text {
         font-size: 11px;
-        padding: 1rem;
-        margin-left: 0;
+        margin-left: 5px;
         border: none;
         width: 100%;
     }
