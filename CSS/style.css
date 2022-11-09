@@ -86,12 +86,15 @@ header {
         padding: 1.5rem;
     }
 
-    .nav-link:hover {
+    .nav-link[data-active=true] {
         border-top: none;
         border-bottom: 3px solid var(--primary-1);
     }
 
-    .nav-link[data-active=true] {
+    .nav-link[data-active=false] {
+        border-bottom: 3px solid var(--grey-1);
+    }
+    .nav-link[data-active=false]:hover {
         border-top: none;
         border-bottom: 3px solid var(--primary-1);
     }
@@ -120,12 +123,9 @@ header {
     }   
 }
 
-/* -------------------------------- */ 
-
 .search-form {
     width: 100%;
-    display: inline-flex;
-    
+    display: inline-flex;  
 }
 
 .search-icon {
