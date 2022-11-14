@@ -32,12 +32,12 @@ a {
     color: var(--black-1);
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.5px) {
     html, body {
         width: 95%;
     }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
     html, body {
         width: 100%;
     }
@@ -81,7 +81,7 @@ header {
     font-weight: 500;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.5px) {
     .nav-link[data-active=true] {
         color: var(--black-1);
         border-top: none;
@@ -94,7 +94,7 @@ header {
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
     header {
         flex-direction: column;
     }
@@ -142,7 +142,7 @@ header {
     margin: 0;
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
     .search-filters {
         width: 90%;
         margin: 0 auto;
@@ -198,7 +198,7 @@ header {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
     .search-form {
         width: 100%;
         padding: 0;
@@ -267,7 +267,7 @@ header {
     margin-left: 10px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.5px) {
     .container-filters-title h3 {
         margin-right: 1rem;
     }
@@ -286,7 +286,7 @@ header {
 }
 
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
     .container-filters-title {
         flex-direction: column;
     }  
@@ -443,8 +443,7 @@ header {
 
 .container-marseille-infos p {
     font-size: 14px;
-    margin-top: 0.5rem;
-    margin-bottom: 1rem;
+    margin-top: 0.2rem;
     font-weight: 600;
 }
 
@@ -579,7 +578,7 @@ header {
 }
 
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.5px) {
     .hostels {
         flex-direction: column;
         height: auto;
@@ -618,7 +617,7 @@ header {
    
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
     .hostels {
         flex-direction: column-reverse;
         width: 90%;
@@ -785,13 +784,13 @@ header {
 
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.5px) {
     .activities h2 {
         margin-bottom: 2rem;
     }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
     .activities {
         width: 90%;
         margin: 0 auto;
@@ -880,7 +879,7 @@ footer {
     }
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 991.5px) {
     .about {
         margin-right:80px;
     }
@@ -899,7 +898,7 @@ footer {
     }  
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.5px) {
     footer {
         width: 100vw;
         margin-top: 50px;
