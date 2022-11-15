@@ -686,6 +686,7 @@ header {
     .card-popular {
         width: 90%;
         height: 144px;
+        min-height: 144px;
         margin: 12px 0 0;
     }
     .card-popular-img {
